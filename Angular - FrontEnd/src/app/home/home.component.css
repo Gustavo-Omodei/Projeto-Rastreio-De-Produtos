@@ -1,13 +1,23 @@
 body {
-    margin: 0;
-    padding: 0;
-    min-height: 100vh;
-    position: relative;
+  
+  margin: 0;
+  padding: 0;
+  min-height: 100vh;
+  position: relative;
+  font-family: Arial, Helvetica, sans-serif;
   }
 
+  .imagemFundo{
+    background-image:url('https://saturnobrasil.com.br/wp-content/uploads/2022/04/Grupo-125.png');
+    background-size: cover;
+    background-position: center;
+    padding: 10px;
+    height: 700px;
+  }
 #tituloInicial{
-    color: rgb(109, 1, 1);
-    font-family: Arial, Helvetica, sans-serif;
+
+    margin-top: 10%;
+    color: orangered;
     font-size: 70px;
     text-align: center;
     font-weight: 100;
@@ -18,27 +28,109 @@ body {
 
 #subtitulo{
     text-align: center;
-    color: brown;
-    font-weight: 100;
-    font-size: 30px;
-    font-family: Arial, Helvetica, sans-serif;
+    color: orangered;
+    font-size: 18px;
 }
 
+
 #subtitulo a{
-    text-decoration: none;
-    padding: 10px;
-    border-radius: 20px;
-    background-color: brown;
-    color: white;
-    font-size: 20px;
+  text-decoration: none;
+  padding: 10px 20px;
+  border-radius: 20px;
+  background:linear-gradient(to right,orange, orangered);
+  color: white;
+  font-size: 20px;
+  font-weight: bold;
 }
-   
-  footer {
-    position: absolute; /* ou fixed, dependendo do comportamento desejado */
-    bottom: 0;
-    width: 100%;
-    background-color: #f1f1f1;
-    text-align: center;
-    padding: 5px;
-    font-family: Arial, Helvetica, sans-serif;
-  }
+
+.servicos{
+  
+  margin-top: 10%;
+  text-align: center;
+}
+
+.servicos h1{
+  color: red;
+}
+.servicos h2{
+  color: #333;
+}
+.servicos ul{
+  list-style-type: none;
+  justify-content:space-evenly;
+}
+.servicos ul li{  
+  padding: 5vw 3vw;
+  background-color: #f5f5f5;
+  box-shadow: 0px 0px 10px 0px rgb(188, 188, 188) ;
+  border-radius: 5px;
+
+}
+
+#subtituloServicos{
+  text-align: center;
+  color: #333;
+  font-size: 1,5vw;
+
+}
+
+footer {
+  position: absolute; /* ou fixed, dependendo do comportamento desejado */
+  bottom: 0;
+  width: 100%;
+  background-color: #f1f1f1;
+  text-align: center;
+  padding: 5px;
+}  
+
+.rastreamento {
+  margin-top: 5%;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  background-color: orangered;
+  border-radius: 2vw;
+  padding: 2%;
+  margin-left: 15%;
+  margin-right: 15%;
+}
+
+.rastreamento h2 {
+  color: white;
+  font-size: 2vw;
+  margin-bottom: 2%;
+}
+
+.rastreamento a {
+  background-color: white;
+  text-decoration: none;
+  color: orangered;
+  padding: 1% 4%;
+  font-weight: bold;  
+  font-size: 1.5vw;
+  border-radius: 2vw;
+}
+
+.fimPagina{
+  margin-top: 5%;
+  display: flex;
+  align-items: center;
+  justify-content: space-around;
+}
+
+.fimPagina ul{
+  font-size: 16px;
+  list-style-type: none;
+  justify-content: right;
+}
+
+.fimPagina ul li{
+  margin-top: 1vw;
+}
+
+.fimPagina ul li a{
+  text-decoration: none;
+  color: orangered;
+  font-weight: bold;
+}
+  

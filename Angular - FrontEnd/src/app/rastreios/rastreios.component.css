@@ -2,3 +2,7 @@ input::placeholder{
     font-family: Arial, Helvetica, sans-serif;
     color: black;
 }
+input{
+    color: red;
+    border-radius: 10px;
+}

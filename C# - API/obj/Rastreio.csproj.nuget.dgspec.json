@@ -1,20 +1,24 @@
 {
   "format": 1,
   "restore": {
-    "C:\\Users\\gusta\\OneDrive\\Área de Trabalho\\Projeto-Rastreio-De-Produtos-main\\Rastreio.csproj": {}
+    "C:\\Users\\a891607\\Documents\\GitHub\\Projeto-Rastreio-De-Produtos\\C# - API\\Rastreio.csproj": {}
   },
   "projects": {
-    "C:\\Users\\gusta\\OneDrive\\Área de Trabalho\\Projeto-Rastreio-De-Produtos-main\\Rastreio.csproj": {
+    "C:\\Users\\a891607\\Documents\\GitHub\\Projeto-Rastreio-De-Produtos\\C# - API\\Rastreio.csproj": {
       "version": "1.0.0",
       "restore": {
-        "projectUniqueName": "C:\\Users\\gusta\\OneDrive\\Área de Trabalho\\Projeto-Rastreio-De-Produtos-main\\Rastreio.csproj",
+        "projectUniqueName": "C:\\Users\\a891607\\Documents\\GitHub\\Projeto-Rastreio-De-Produtos\\C# - API\\Rastreio.csproj",
         "projectName": "Rastreio",
-        "projectPath": "C:\\Users\\gusta\\OneDrive\\Área de Trabalho\\Projeto-Rastreio-De-Produtos-main\\Rastreio.csproj",
-        "packagesPath": "C:\\Users\\gusta\\.nuget\\packages\\",
-        "outputPath": "C:\\Users\\gusta\\OneDrive\\Área de Trabalho\\Projeto-Rastreio-De-Produtos-main\\obj\\",
+        "projectPath": "C:\\Users\\a891607\\Documents\\GitHub\\Projeto-Rastreio-De-Produtos\\C# - API\\Rastreio.csproj",
+        "packagesPath": "C:\\Users\\a891607\\.nuget\\packages\\",
+        "outputPath": "C:\\Users\\a891607\\Documents\\GitHub\\Projeto-Rastreio-De-Produtos\\C# - API\\obj\\",
         "projectStyle": "PackageReference",
+        "fallbackFolders": [
+          "C:\\Program Files (x86)\\Microsoft Visual Studio\\Shared\\NuGetPackages"
+        ],
         "configFilePaths": [
-          "C:\\Users\\gusta\\AppData\\Roaming\\NuGet\\NuGet.Config",
+          "C:\\Users\\a891607\\AppData\\Roaming\\NuGet\\NuGet.Config",
+          "C:\\Program Files (x86)\\NuGet\\Config\\Microsoft.VisualStudio.FallbackLocation.config",
           "C:\\Program Files (x86)\\NuGet\\Config\\Microsoft.VisualStudio.Offline.config"
         ],
         "originalTargetFrameworks": [
@@ -22,6 +26,7 @@
         ],
         "sources": {
           "C:\\Program Files (x86)\\Microsoft SDKs\\NuGetPackages\\": {},
+          "C:\\Program Files\\dotnet\\library-packs": {},
           "https://api.nuget.org/v3/index.json": {}
         },
         "frameworks": {
@@ -82,7 +87,7 @@
               "privateAssets": "all"
             }
           },
-          "runtimeIdentifierGraphPath": "C:\\Program Files\\dotnet\\sdk\\7.0.403\\RuntimeIdentifierGraph.json"
+          "runtimeIdentifierGraphPath": "C:\\Program Files\\dotnet\\sdk\\8.0.100\\RuntimeIdentifierGraph.json"
         }
       }
     }
