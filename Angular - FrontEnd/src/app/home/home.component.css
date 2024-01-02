@@ -1,0 +1,44 @@
+body {
+    margin: 0;
+    padding: 0;
+    min-height: 100vh;
+    position: relative;
+  }
+
+#tituloInicial{
+    color: rgb(109, 1, 1);
+    font-family: Arial, Helvetica, sans-serif;
+    font-size: 70px;
+    text-align: center;
+    font-weight: 100;
+}
+#tituloInicial b{
+    font-size: 80px;
+}
+
+#subtitulo{
+    text-align: center;
+    color: brown;
+    font-weight: 100;
+    font-size: 30px;
+    font-family: Arial, Helvetica, sans-serif;
+}
+
+#subtitulo a{
+    text-decoration: none;
+    padding: 10px;
+    border-radius: 20px;
+    background-color: brown;
+    color: white;
+    font-size: 20px;
+}
+   
+  footer {
+    position: absolute; /* ou fixed, dependendo do comportamento desejado */
+    bottom: 0;
+    width: 100%;
+    background-color: #f1f1f1;
+    text-align: center;
+    padding: 5px;
+    font-family: Arial, Helvetica, sans-serif;
+  }

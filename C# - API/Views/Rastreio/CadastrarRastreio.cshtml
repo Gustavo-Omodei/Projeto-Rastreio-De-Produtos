@@ -1,0 +1,32 @@
+﻿@using Rastreio.Models
+@model Rastreio.Models.Rastreamento
+
+@*
+    For more information on enabling MVC for empty projects, visit https://go.microsoft.com/fwlink/?LinkID=397860
+*@
+@{
+}
+@using (Html.BeginForm("CadastrarRastreio", "Rastreio", FormMethod.Post))
+{
+    Rastreamento rastreio = new Rastreamento();
+
+    <div>
+        <h2>Rastreamento de Produtos</h2>
+
+        @Html.DisplayNameFor(m => m.CodigoRastreio) <br />
+        @Html.TextBoxFor(m => m.CodigoRastreio) <br />
+
+        @Html.DisplayNameFor(m => m.StatusEvento)
+        <br />
+        @Html.TextBoxFor(m => m.StatusEvento)
+        <br />
+        @Html.DisplayNameFor(m => m.FkCliente) <br>
+        @Html.TextBoxFor(m => m.FkCliente)
+        
+        <input type="submit" value="Cadastrar"/>
+
+    </div>
+
+
+}
+

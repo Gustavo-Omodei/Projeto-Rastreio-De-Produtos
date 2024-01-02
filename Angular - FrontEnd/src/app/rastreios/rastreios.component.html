@@ -1,0 +1,34 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Document</title>
+</head>
+<body>
+  <div>
+    <label for="rastreamentoId">Digite o código de rastreio:</label>
+    <input type="text" id="rastreamentoId" [(ngModel)]="rastreamentoID" />
+    <button (click)="pesquisarPorId()">Pesquisar</button>
+  
+    <form (ngSubmit)="atualizarRastreio(rastreamentoID)">
+      <div *ngIf="teste">
+        <h2>Detalhes do Rastreamento</h2>
+        <p>Código de Rastreio:{{teste.codigoRastreio}}</p>
+        <p>Data do Evento: {{ teste.dataEvento | date:'short' }}</p>
+        <p>Status do Evento:<select [(ngModel)]="rastreamentoAtualizado.statusEvento" name="CodigoRastreio" required>
+          <option disabled selected value="">{{teste.statusEvento
+          }}</option>
+          <option value="Coletado">Coletado</option>
+          <option value="Em Transporte">Em Transporte</option>
+          <option value="Entregue">Entregue</option>
+        </select> <br>
+        <p>Cliente: {{ teste.fkCliente }}</p>
+        <p>Destino Final: <input [(ngModel)]="rastreamentoAtualizado.destinoFinal" name="destinoFinal" required placeholder="{{teste.destinoFinal}}">
+      </div>
+      <button type="submit">Atualizar</button>
+    </form>
+  </div>
+  
+</body>
+</html>

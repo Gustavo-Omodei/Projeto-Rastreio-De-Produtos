@@ -1,0 +1,17 @@
+<h2>Cadastrar Rastreio</h2>
+<form (ngSubmit)="cadastrarRastreio()">
+  <label>Código de Rastreio:</label> <br>
+  <input [(ngModel)]="rastreio.codigoRastreio" name="CodigoRastreio" required> <br>
+
+  <label> CPF do Cliente:</label> <br>
+  <input [(ngModel)]="rastreio.fkCliente" name="fkCliente"> <br>
+
+  <label>Status de Transporte:</label> <br>
+  <select [(ngModel)]="rastreio.statusEvento" name="CodigoRastreio" required> 
+    <option value="Coletado">Coletado</option>
+    <option value="Em Transporte">Em Transporte</option>
+    <option value="Entregue">Entregue</option>
+  </select> <br>
+
+  <button type="submit">Cadastrar Rastreio</button>
+</form>
