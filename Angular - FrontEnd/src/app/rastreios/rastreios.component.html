@@ -6,19 +6,31 @@
   <title>Document</title>
 </head>
 <body>
-  <div>
-    <label for="rastreamentoId">Digite o código de rastreio:</label>
-    <input type="text" id="rastreamentoId" [(ngModel)]="rastreamentoID" />
-    <button (click)="pesquisarPorId()">Pesquisar</button>
+  <div class="rastreioProduto">
+    <h2>Rastreio</h2>
+    <label for="rastreamentoId"></label>
+    <input type="text" id="rastreamentoId" [(ngModel)]="rastreamentoID" placeholder="Codigo de rastreio" /> <br>
+    <br>
+    <button (click)="pesquisarPorId()">PESQUISAR</button>
+  </div>
   
+    <div class="detalhesRastreamento" *ngIf="teste">
+        <h2>Detalhes do Rastreamento</h2>
+        <p><b>Código de Rastreio:</b>{{teste.codigoRastreio}}</p>
+        <p><b>Data do Evento:</b> {{ teste.dataEvento | date:'short' }}</p>
+        <p><b>Status do Evento</b> {{teste.statusEvento}}</p>
+        <p><b>Cliente:</b> {{ teste.fkCliente }}
+        <p><b>Destino Final:</b> {{teste.destinoFinal}}</p>
+      </div>
+
+      <!-- Atualização de rastreio -->
     <!-- <form (ngSubmit)="atualizarRastreio(rastreamentoID)">
       <div *ngIf="teste">
         <h2>Detalhes do Rastreamento</h2>
         <p>Código de Rastreio:{{teste.codigoRastreio}}</p>
         <p>Data do Evento: {{ teste.dataEvento | date:'short' }}</p>
         <p>Status do Evento:<select [(ngModel)]="rastreamentoAtualizado.statusEvento" name="CodigoRastreio" required>
-          <option disabled selected value="">{{teste.statusEvento
-          }}</option>
+          <option disabled selected value="">{{teste.statusEvento}}</option>
           <option value="Coletado">Coletado</option>
           <option value="Em Transporte">Em Transporte</option>
           <option value="Entregue">Entregue</option>
@@ -28,7 +40,7 @@
       </div>
       <button type="submit">Atualizar</button>
     </form> -->
-  </div>
+ 
   
 </body>
 </html>
