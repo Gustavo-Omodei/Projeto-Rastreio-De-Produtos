@@ -1,3 +1,7 @@
+using Microsoft.AspNetCore.Authentication.JwtBearer;
+using Microsoft.IdentityModel.Tokens;
+using System.Text;
+
 namespace Rastreio
 {
     public class Program
@@ -17,7 +21,40 @@ namespace Rastreio
                 });
             });
 
+            var tokenKey = "essa é a minha chave privada secreta";
+            var key = Encoding.ASCII.GetBytes(tokenKey);
+
+            builder.Services.AddAuthentication
+            (
+                x =>
+                {
+                    x.DefaultAuthenticateScheme = JwtBearerDefaults.AuthenticationScheme;
+                    x.DefaultChallengeScheme = JwtBearerDefaults.AuthenticationScheme;
+                }
+            ).AddJwtBearer
+            (
+                x =>
+                {
+                    x.RequireHttpsMetadata = false;
+                    x.SaveToken = true;
+                    x.TokenValidationParameters = new TokenValidationParameters
+                    {
+                        ValidateIssuerSigningKey = true,
+                        IssuerSigningKey = new SymmetricSecurityKey(key),
+                        ValidateIssuer = false,
+                        ValidateAudience = false
+                    };
+                }
+            );
+
+            RastreioDeProdutosContext context = new RastreioDeProdutosContext();
+
+            builder.Services.AddSingleton<IJWTAuthenticationManager>(new JWTAuthenticationManager(tokenKey, context));
+
+
+
             builder.Services.AddControllersWithViews();
+            builder.Services.AddDbContext<RastreioDeProdutosContext>();
             var app = builder.Build();
 
             // Configure the HTTP request pipeline.
@@ -29,11 +66,14 @@ namespace Rastreio
             }
 
             app.UseHttpsRedirection();
+
             app.UseStaticFiles();
 
             app.UseRouting();
 
             app.UseCors(MyAllowSpecificOrigins);
+
+            app.UseAuthentication();
 
             app.UseAuthorization();
 
@@ -43,7 +83,7 @@ namespace Rastreio
 
             app.Run();
 
-          
+
         }
     }
 }

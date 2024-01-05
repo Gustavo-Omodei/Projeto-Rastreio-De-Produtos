@@ -20,6 +20,7 @@ public partial class RastreioDeProdutosContext : DbContext
 
     public virtual DbSet<Produto> Produtos { get; set; }
 
+    public virtual DbSet<Usuario> Usuario { get; set; }
     public virtual DbSet<Rastreamento> Rastreamentos { get; set; }
 
     protected override void OnConfiguring(DbContextOptionsBuilder optionsBuilder)
@@ -82,6 +83,22 @@ public partial class RastreioDeProdutosContext : DbContext
             entity.HasOne(d => d.FkClienteNavigation).WithMany(p => p.Rastreamentos)
                 .HasForeignKey(d => d.FkCliente)
                 .HasConstraintName("FK__Rastreame__fk_Pr__3B75D760");
+        });
+
+        modelBuilder.Entity<Usuario>(entity =>
+        {
+            entity.HasKey(e => e.Id).HasName("PK__Usuarios__3214EC07F85D7FDC");
+
+            entity.ToTable("Usuario");
+
+            entity.Property(e => e.Username)
+                .HasMaxLength(30)
+                .IsUnicode(false)
+                .HasColumnName("Username");
+            entity.Property(e => e.Senha)
+                .HasMaxLength(15)
+                .IsUnicode(false)
+                .HasColumnName("Senha");
         });
 
         OnModelCreatingPartial(modelBuilder);
