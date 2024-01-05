@@ -1,1 +1,46 @@
-<p>contato works!</p>
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <div class="imagemFundo">
+    
+    <h2>ENTRE EM CONTATO</h2>
+    <div class="contatos">
+        <ul class="comercial" >
+        <p>Contato <b>Comercial</b></p>
+        <li> <input type="text" placeholder="Nome"></li>
+        <li> <input type="text" placeholder="Email"></li>
+        <li> <input type="text" placeholder="Telefone"></li>
+        <li><textarea name="" id="" rows="4" placeholder="Digite sua mensagem para fins comerciais"></textarea></li>
+        <li><button type="submit">Enviar</button></li>
+    </ul>
+
+    <ul class="clientes" >
+        <p>Atendimento <b>Clientes</b></p>
+        <li> <input type="text" placeholder="Nome"></li>
+        <li> <input type="text" placeholder="Email"></li>
+        <li> <input type="text" id="telefone" placeholder="Telefone"></li>
+        <li><textarea name="" id="" rows="4" placeholder="Digite sua solicitação informando seu CPF"></textarea></li>
+        <li><button type="submit" (click)="enviarForm()">Enviar</button></li>
+    </ul>
+
+    <ul class="infos" >
+        <li><img src="assets/icons/e-mail.png" alt="">
+            <p><b>Atendimento</b> <br>
+             <a href="mailto:sac@splitlog.com" target="_blank">sac&#64;plitlog.com</a> </p> 
+            </li>
+        <li><img src="assets/icons/relogio.png" alt="">
+            <p><b>Horário de Atendimento</b> <br>
+            Das 9:00 as 18:00</p></li>
+            <li><img src="assets/icons/telefone.png" alt="">
+                <p><b>Telefone</b> <br>
+                43 4002-8922</p></li>
+    </ul>
+    </div>
+    </div>
+</body>
+</html>
