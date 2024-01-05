@@ -1,4 +1,5 @@
-﻿using Microsoft.AspNetCore.Mvc;
+﻿using Microsoft.AspNetCore.Authorization;
+using Microsoft.AspNetCore.Mvc;
 using Microsoft.EntityFrameworkCore;
 using Rastreio.Models;
 using System.Collections.Generic;
@@ -8,6 +9,12 @@ namespace Rastreio.Controllers
 
     public class RastreioController : Controller
     {
+        private readonly IJWTAuthenticationManager jwt;
+
+        public RastreioController(IJWTAuthenticationManager jwt)
+        {
+            this.jwt = jwt;
+        }
 
         [HttpGet]
         [Route("/rastrear/{codigoRastreio}")]
@@ -103,6 +110,28 @@ namespace Rastreio.Controllers
                 return StatusCode(500, "Erro interno do servidor");
 
             }
+        }
+
+        [HttpGet]
+        [Route("/autenticar")]
+        public IActionResult Autenticar()
+        {
+            return Ok();
+        }
+
+        [AllowAnonymous]
+        [HttpPost]
+        [Route("/autenticar")]
+        public IActionResult Autenticar([FromBody] Usuario usuario)
+        {
+            var token = jwt.Authenticate(usuario.Username, usuario.Senha);
+
+            if (token == null)
+            {
+                return Unauthorized();
+            }
+
+            return Ok(token);
         }
     }
 }

@@ -14,7 +14,7 @@ using System.Reflection;
 [assembly: System.Reflection.AssemblyCompanyAttribute("Rastreio")]
 [assembly: System.Reflection.AssemblyConfigurationAttribute("Debug")]
 [assembly: System.Reflection.AssemblyFileVersionAttribute("1.0.0.0")]
-[assembly: System.Reflection.AssemblyInformationalVersionAttribute("1.0.0")]
+[assembly: System.Reflection.AssemblyInformationalVersionAttribute("1.0.0+0409fda0e5005e6a178a2fb1fb839059adce77ee")]
 [assembly: System.Reflection.AssemblyProductAttribute("Rastreio")]
 [assembly: System.Reflection.AssemblyTitleAttribute("Rastreio")]
 [assembly: System.Reflection.AssemblyVersionAttribute("1.0.0.0")]
