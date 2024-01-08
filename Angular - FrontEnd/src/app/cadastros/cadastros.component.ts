@@ -25,14 +25,39 @@ export class CadastrosComponent {
     });
   }
   cadastrarRastreio() {
-    this.rastreamentoService.cadastrarRastreio(this.rastreio).subscribe(
-      (response) => {
-        console.log('Rastreio cadastrado:', response);
-        this.getRastreio();
-      },
-      (error) => {
-        console.error('Erro ao cadastrar rastreio:', error);
-      }
-    );
+    const valorCodigo = this.rastreio.codigoRastreio
+    const valorCPF = this.rastreio.fkCliente
+
+    const regex = /^[0-9]+$/;
+
+    if (regex.test(valorCodigo)){
+      this.rastreamentoService.cadastrarRastreio(this.rastreio).subscribe(
+        (response) => {
+          alert("Rastreio cadastrado com sucesso")
+          this.getRastreio();
+        },
+        (error) => {
+          console.error('Erro ao cadastrar rastreio:', error);
+        }
+      );
+    }
+    else{
+      alert("O código de rastreio deve conter apenas números")
+    }
+
+    if (regex.test(valorCPF)){
+      this.rastreamentoService.cadastrarRastreio(this.rastreio).subscribe(
+        (response) => {
+          alert("Rastreio cadastrado com sucesso")
+          this.getRastreio();
+        },
+        (error) => {
+          console.error('Erro ao cadastrar rastreio:', error);
+        }
+      );
+    }
+    else{
+      alert("O CPF do cliente deve conter apenas números")
+    }
   }
 }

@@ -9,8 +9,7 @@ import { RastreamentoService } from '../services/rastreamento.service';
 export class RastreiosComponent {
   title = 'Rastreio';
   rastreio = {} as Rastreamento;
-  rastreios: Rastreamento[] = [];
-  teste : Rastreamento = {} as Rastreamento;
+  rastreios : Rastreamento = {} as Rastreamento;
   rastreamentoID: string = '';
   rastreamentoAtualizado: Rastreamento = { statusEvento: '' } as Rastreamento;
 
@@ -22,14 +21,18 @@ export class RastreiosComponent {
 
   getRastreioByID(id: string) {
     this.rastreamentoService.getRastreioByID(id).subscribe((teste: Rastreamento) => {
-      this.teste = teste;
+      this.rastreios = teste;
     console.log('StatusEvento antes da atualização:', this.rastreamentoAtualizado.statusEvento);
 
     });
   }
 
   atualizarRastreio(id: string) {
+<<<<<<< Updated upstream
     console.log('StatusEvento antes da atualização:', this.teste.statusEvento);
+=======
+    console.log('StatusEvento antes da atualização:', this.rastreios.statusEvento);
+>>>>>>> Stashed changes
     this.rastreamentoService.atualizarRastreio(this.rastreamentoID, this.rastreamentoAtualizado).subscribe(
       (teste) => {
         console.log('Rastreamento atualizado', teste.statusEvento);
@@ -41,7 +44,7 @@ export class RastreiosComponent {
     if (this.rastreamentoID) {
       this.rastreamentoService.getRastreioByID(this.rastreamentoID).subscribe(
         (resultado: Rastreamento) => {
-          this.teste = resultado;
+          this.rastreios = resultado;
         },
         (erro) => {
           alert("Código não encontrado");

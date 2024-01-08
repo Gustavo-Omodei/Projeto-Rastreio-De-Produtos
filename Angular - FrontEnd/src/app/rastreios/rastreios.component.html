@@ -14,13 +14,13 @@
     <button (click)="pesquisarPorId()">PESQUISAR</button>
   </div>
   
-    <div class="detalhesRastreamento" *ngIf="teste">
+    <div class="detalhesRastreamento" *ngIf="rastreios">
         <h2>Detalhes do Rastreamento</h2>
-        <p><b>Código de Rastreio:</b>{{teste.codigoRastreio}}</p>
-        <p><b>Data do Evento:</b> {{ teste.dataEvento | date:'short' }}</p>
-        <p><b>Status do Evento</b> {{teste.statusEvento}}</p>
-        <p><b>Cliente:</b> {{ teste.fkCliente }}
-        <p><b>Destino Final:</b> {{teste.destinoFinal}}</p>
+        <p><b>Código de Rastreio:</b>{{rastreios.codigoRastreio}}</p>
+        <p><b>Data do Evento:</b> {{ rastreios.dataEvento | date:'short' }}</p>
+        <p><b>Status do Evento</b> {{rastreios.statusEvento}}</p>
+        <p><b>Cliente:</b> {{ rastreios.fkCliente }}
+        <p><b>Destino Final:</b> {{rastreios.destinoFinal}}</p>
       </div>
 
       <!-- Atualização de rastreio -->

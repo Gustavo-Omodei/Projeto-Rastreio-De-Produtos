@@ -3,7 +3,7 @@ export interface Rastreamento {
     codigoRastreio: string;
     dataEvento: Date;
     statusEvento: string;
-    fkCliente: number;
+    fkCliente: string;
     destinoFinal: string;
     alteracaoStatus : string;
 }

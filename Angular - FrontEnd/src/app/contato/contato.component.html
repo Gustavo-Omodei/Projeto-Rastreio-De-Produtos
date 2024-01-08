@@ -10,22 +10,23 @@
     
     <h2>ENTRE EM CONTATO</h2>
     <div class="contatos">
+        
         <ul class="comercial" >
         <p>Contato <b>Comercial</b></p>
-        <li> <input type="text" placeholder="Nome"></li>
-        <li> <input type="text" placeholder="Email"></li>
-        <li> <input type="text" placeholder="Telefone"></li>
-        <li><textarea name="" id="" rows="4" placeholder="Digite sua mensagem para fins comerciais"></textarea></li>
-        <li><button type="submit">Enviar</button></li>
+        <li> <input type="text" id="name" [(ngModel)]="nameComercial" placeholder="Nome"></li>
+        <li> <input type="text" id="email" [(ngModel)]="emailComercial" placeholder="Email"></li>
+        <li> <input type="text" id="telefone" [(ngModel)]="telComercial" placeholder="Telefone"></li>
+        <li><textarea name="" id="" rows="4" [(ngModel)]="textAreaComercial" placeholder="Digite sua mensagem para fins comerciais"></textarea></li>
+        <li><button type="submit" (click)="enviarFormComercial()">Enviar</button></li>
     </ul>
 
     <ul class="clientes" >
         <p>Atendimento <b>Clientes</b></p>
-        <li> <input type="text" placeholder="Nome"></li>
-        <li> <input type="text" placeholder="Email"></li>
-        <li> <input type="text" id="telefone" placeholder="Telefone"></li>
-        <li><textarea name="" id="" rows="4" placeholder="Digite sua solicitação informando seu CPF"></textarea></li>
-        <li><button type="submit" (click)="enviarForm()">Enviar</button></li>
+        <li> <input type="text" id="name" [(ngModel)]="nameCliente" placeholder="Nome"></li>
+        <li> <input type="text" id="email" [(ngModel)]="emailCliente" placeholder="Email"></li>
+        <li> <input type="text" id="telefone" [(ngModel)]="telCliente" placeholder="Telefone"></li>
+        <li><textarea name="" id="" rows="4" [(ngModel)]="textAreaCliente" placeholder="Digite sua solicitação informando seu CPF"></textarea></li>
+        <li><button type="submit" (click)="enviarFormCliente()">Enviar</button></li>
     </ul>
 
     <ul class="infos" >
