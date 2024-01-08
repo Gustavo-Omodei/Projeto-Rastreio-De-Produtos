@@ -30,8 +30,6 @@ export class RastreiosComponent {
 
   atualizarRastreio(id: string) {
     console.log('StatusEvento antes da atualização:', this.teste.statusEvento);
-    
-    // Certifique-se de que o objeto rastreamentoAtualizado está sendo preenchido corretamente
     this.rastreamentoService.atualizarRastreio(this.rastreamentoID, this.rastreamentoAtualizado).subscribe(
       (teste) => {
         console.log('Rastreamento atualizado', teste.statusEvento);

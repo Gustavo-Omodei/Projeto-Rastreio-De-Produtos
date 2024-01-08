@@ -6,7 +6,6 @@ using System.Collections.Generic;
 
 namespace Rastreio.Controllers
 {
-
     public class RastreioController : Controller
     {
         private readonly IJWTAuthenticationManager jwt;
@@ -112,19 +111,16 @@ namespace Rastreio.Controllers
             }
         }
 
-        [HttpGet]
-        [Route("/autenticar")]
-        public IActionResult Autenticar()
-        {
-            return Ok();
-        }
-
-        [AllowAnonymous]
-        [HttpPost]
-        [Route("/autenticar")]
+        [HttpPost("autenticar")]
         public IActionResult Autenticar([FromBody] Usuario usuario)
         {
+
+            if (usuario == null)
+            {
+                return BadRequest("Usuário não fornecido");
+            }
             var token = jwt.Authenticate(usuario.Username, usuario.Senha);
+
 
             if (token == null)
             {

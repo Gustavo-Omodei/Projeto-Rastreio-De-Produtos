@@ -87,7 +87,7 @@ public partial class RastreioDeProdutosContext : DbContext
 
         modelBuilder.Entity<Usuario>(entity =>
         {
-            entity.HasKey(e => e.Id).HasName("PK__Usuarios__3214EC07F85D7FDC");
+            entity.HasKey(e => e.Id).HasName("PK__Usuario__3213E83F4B00DA12");
 
             entity.ToTable("Usuario");
 

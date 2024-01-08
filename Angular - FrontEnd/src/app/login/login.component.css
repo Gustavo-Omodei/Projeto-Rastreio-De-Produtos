@@ -1,0 +1,15 @@
+.alinhar{
+    display: flex;
+    align-items: center;
+    border-radius: 15px;
+}
+
+.padding{
+    text-align: center;
+    background-color: red;
+}
+.forms form{
+
+    display: flex;
+    flex-direction: column;
+}   

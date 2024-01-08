@@ -21,7 +21,7 @@ namespace Rastreio
                 });
             });
 
-            var tokenKey = "essa é a minha chave privada secreta";
+            var tokenKey = "eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJ1bmlxdWVfbmFtZSI6ImFkbWluIiwibmJmIjoxNzA0NTU5Njk0LCJleHAiOjE3MDQ1NjMyOTQsImlhdCI6MTcwNDU1OTY5NH0.f-1StO-phk1lSfUwm1hYLMMobo4jb8sR0t_TBBPA6l8";
             var key = Encoding.ASCII.GetBytes(tokenKey);
 
             builder.Services.AddAuthentication
@@ -52,10 +52,9 @@ namespace Rastreio
             builder.Services.AddSingleton<IJWTAuthenticationManager>(new JWTAuthenticationManager(tokenKey, context));
 
 
-
             builder.Services.AddControllersWithViews();
             builder.Services.AddDbContext<RastreioDeProdutosContext>();
-            var app = builder.Build();
+            using var app = builder.Build();
 
             // Configure the HTTP request pipeline.
             if (!app.Environment.IsDevelopment())

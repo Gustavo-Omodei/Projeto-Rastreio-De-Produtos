@@ -28,6 +28,7 @@
             "browser": "src/main.ts",
             "polyfills": [
               "zone.js"
+              
             ],
             "tsConfig": "tsconfig.app.json",
             "assets": [
@@ -46,6 +47,7 @@
           },
           "configurations": {
             "production": {
+              "proxyConfig": "src/proxy.conf.json",
               "budgets": [
                 {
                   "type": "initial",

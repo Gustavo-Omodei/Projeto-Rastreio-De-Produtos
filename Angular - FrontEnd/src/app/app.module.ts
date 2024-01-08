@@ -9,6 +9,8 @@ import { HomeComponent } from './home/home.component';
 import { RastreiosComponent } from './rastreios/rastreios.component';
 import { SobreComponent } from './sobre/sobre.component';
 import { ContatoComponent } from './contato/contato.component';
+import { LoginComponent } from './login/login.component';
+import { AuthService } from './services/auth.service';
 
 
 
@@ -20,7 +22,8 @@ import { ContatoComponent } from './contato/contato.component';
     HomeComponent,
     RastreiosComponent,
     SobreComponent,
-    ContatoComponent
+    ContatoComponent,
+    LoginComponent
   ],
   imports: [
     BrowserModule,
@@ -29,7 +32,7 @@ import { ContatoComponent } from './contato/contato.component';
     FormsModule
   ],
   providers: [
-    provideClientHydration(),HttpClientModule,FormsModule
+    provideClientHydration(),HttpClientModule,FormsModule, AuthService
   ],
   bootstrap: [AppComponent]
 })
