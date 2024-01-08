@@ -28,14 +28,10 @@ export class RastreiosComponent {
   }
 
   atualizarRastreio(id: string) {
-<<<<<<< Updated upstream
-    console.log('StatusEvento antes da atualização:', this.teste.statusEvento);
-=======
     console.log('StatusEvento antes da atualização:', this.rastreios.statusEvento);
->>>>>>> Stashed changes
     this.rastreamentoService.atualizarRastreio(this.rastreamentoID, this.rastreamentoAtualizado).subscribe(
-      (teste) => {
-        console.log('Rastreamento atualizado', teste.statusEvento);
+      (response) => {
+        console.log('Rastreamento atualizado', response.statusEvento);
       }
     );
   } 
