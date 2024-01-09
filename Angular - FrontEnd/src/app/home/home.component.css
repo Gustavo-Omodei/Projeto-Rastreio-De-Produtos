@@ -8,8 +8,8 @@ body {
   }
 
   .imagemFundo{
-    background-image:url('https://saturnobrasil.com.br/wp-content/uploads/2022/04/Grupo-125.png');
-    background-size: cover;
+    background-image:url('background.png');
+    background-size:cover;
     background-position: center;
     padding: 10px;
     height: 700px;
