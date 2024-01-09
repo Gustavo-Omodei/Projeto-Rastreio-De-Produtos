@@ -6,29 +6,51 @@
   <title>Document</title>
 </head>
 <body>
-  <div class="alinhar">
-    <div class="padding">
-      <h2>Bem-vindo de volta</h2>
+  <div class="container">
+    <div class="content first-content">
+      <div class="first-column">
+        <h2 class="tittle-bemvindo">Bem-Vindo!</h2>
+        <p class="description">to keep connected with us</p>
+        <p class="description">please login with your personal info</p>
+      </div>
+
+      <div class="second-column">
+        <h2 class="tittle-Login">Create Account</h2>
+        <p class="description-Login">or user your email for your register</p>
+
+        <div class="forms" *ngIf="!isLoggedIn">
+          <form (ngSubmit)="fazerLogin()">
+            <label for="">
+              <input type="text" id="username" name="username" [(ngModel)]="usuario.username" placeholder="Usuário" required>
+            </label>
+            <label for="">
+              <input type="password" id="password" name="password"  [(ngModel)]="usuario.senha" placeholder="Senha" required>
+            </label>
+            <button class="btn" type="submit">Login</button>
+          </form>
+        </div>
+      </div>
     </div>
-    <div class="forms" *ngIf="!isLoggedIn">
-      <form (ngSubmit)="fazerLogin()">
-        <label for="username">Usuário:</label>
-        <input type="text" id="username" name="username" [(ngModel)]="usuario.username" required>
-        
-        <label for="password">Senha:</label>
-        <input type="password" id="password" name="password" [(ngModel)]="usuario.senha" required>
-        
-        <button type="submit">Entrar</button>
-      </form>
-    </div>
-  </div> 
- 
-  <div *ngIf="isLoggedIn">
-    <p>Você está logado! Será redirecionado para a página de cadastro.</p>
-    <button routerLink="/cadastro">Ir para o Cadastro</button>
+
+   
   </div>
   
 </body>
 </html>
 
 
+
+
+
+
+
+
+
+
+
+
+  <!--
+  <div *ngIf="isLoggedIn">
+    <p>Você está logado! Será redirecionado para a página de cadastro.</p>
+    <button routerLink="/cadastro">Ir para o Cadastro</button>
+  </div> --> 

@@ -1,15 +1,111 @@
-.alinhar{
+*{
+    margin: 0;
+    padding: 0;
+    font-family: Arial, Helvetica, sans-serif;
+}
+.container{
     display: flex;
+    justify-content: center;
     align-items: center;
+    height: 80vh;
+    background-image: url('background.png');
+    background-size: cover;
+    background-position: center;
+}
+.content{
     border-radius: 15px;
 }
-
-.padding{
-    text-align: center;
-    background-color: red;
+.first-content{
+    background-color: white;
+    display: flex;
+    width: 80%;
+    height: 70%;
+    justify-content: space-between;
+    align-items: center;
+    position: relative;
 }
-.forms form{
 
+.first-content::before{
+    content: "";
+    position: absolute;
+    background-color: #ff4500;
+    width: 40%;
+    height: 100%;
+    border-top-left-radius:  15px;
+    border-bottom-left-radius: 15px;
+}
+
+.tittle{
+    font-size: 28px;
+    font-weight: bold;
+    text-transform: capitalize;
+}
+
+.tittle-bemvindo{
+    color: white;
+    
+}
+.description{
+    font-size: 14px;
+    font-weight: 300;
+    color: white;
+    line-height: 30px;
+}
+.btn{
+    border-radius: 15px;
+    font-size: 10px;
+    font-weight: bold;
+    text-transform: uppercase;
+    color: white;
+    padding: 10px 50px;
+    background-color: #ff4500;
+    cursor: pointer;
+    border:  2px solid orangered;
+    width: 150px;
+    align-self: center;
+    margin-top: 8px;
+}
+
+.btn:hover{
+    background-color: white;
+    color: orangered;
+    border: 2px solid orangered;
+    transition: 0.1s;
+}
+
+.first-column{
+    text-align: center;
+    flex: 1 0 auto;
+    z-index: 10;
+}
+
+.second-column{
+    flex: 2 0 auto;
     display: flex;
     flex-direction: column;
-}   
+    align-items: center;
+}
+.forms form{
+    display: flex;
+    flex-direction: column;
+    width: 350px;
+
+}
+
+.forms input{
+    height: 45px;
+    border: none;
+    background-color: #ecf0f1;
+    margin:8px;
+    width: 100%;
+    padding: 0 10px;
+    outline: none;
+}
+
+.tittle-Login{
+    color: orangered;
+}
+
+.description-Login{
+    color:#7f8c8d ;
+}

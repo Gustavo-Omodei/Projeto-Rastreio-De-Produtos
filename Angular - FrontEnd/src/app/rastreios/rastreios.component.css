@@ -1,3 +1,10 @@
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: Arial, Helvetica, sans-serif;
+}
+
 .rastreioProduto{
     background-image:url('background.png');
     background-position: center;
@@ -25,6 +32,7 @@
     border: 2px solid #c8c8c8;
 }
 
+
 .rastreioProduto button{
     width: 15%;
     height: 50px;
@@ -34,8 +42,16 @@
     color: white;
     border: 0 orangered;
     outline: none;
+    cursor: pointer;
 } 
 
+.rastreioProduto button:hover{
+    background-color: white;
+    color: orangered;
+    border: 2px solid orangered;
+    transition: 0.1s;
+
+}
 .detalhesRastreamento{
     margin-top: 5%;
     display: flex;
