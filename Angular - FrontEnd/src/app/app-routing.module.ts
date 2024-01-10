@@ -7,14 +7,16 @@ import { SobreComponent } from './sobre/sobre.component';
 import { ContatoComponent} from './contato/contato.component';
 import { LoginComponent } from './login/login.component';
 import { AuthGuard } from '../../auth.guard';
+import { AtualizarComponent } from './atualizar/atualizar.component';
 
 const routes: Routes = [
   {path: '', component: HomeComponent},
-  {path: 'cadastro', component: CadastrosComponent,canActivate: [AuthGuard]},
+  {path: 'cadastro', component: CadastrosComponent, canActivate: [AuthGuard]},
   {path: 'rastreios', component: RastreiosComponent},
   {path: 'contato', component: ContatoComponent},
   {path: 'sobre', component: SobreComponent},
-  {path: 'login',component: LoginComponent}
+  {path: 'login',component: LoginComponent},
+  {path: 'atualizar', component: AtualizarComponent, canActivate: [AuthGuard]}
 ];
 
 @NgModule({

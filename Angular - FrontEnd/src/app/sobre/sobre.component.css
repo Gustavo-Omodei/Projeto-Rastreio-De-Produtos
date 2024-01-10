@@ -11,6 +11,7 @@ body{
     background-size: cover;
     background-position: center;
     padding: 10px;
+    padding-bottom: 50px;
 }
 
 .conteudo ul{
@@ -81,7 +82,7 @@ body{
   }
   
   footer {
-    position: absolute; /* ou fixed, dependendo do comportamento desejado */
+    position: absolute;
     bottom: 0;
     width: 100%;
     background-color: #f1f1f1;
@@ -115,13 +116,22 @@ body{
     font-weight: bold;  
     font-size: 1.5vw;
     border-radius: 2vw;
-    border: 2px solid orangered;
+    border: 3px solid orangered;
   }
+
+  .btnRastreio:hover{
+    background-color: orangered;
+    color: white;
+    border: 3px solid white;
+    transition: 0.3s;
+  }
+
   .fimPagina{
     margin-top: 5%;
     display: flex;
     align-items: center;
-    justify-content: space-around;
+    justify-content: space-evenly;
+    padding-top: 5px;
   }
   
   .fimPagina ul{
@@ -144,10 +154,5 @@ body{
     color: grey;
   }
 
-  .btnRastreio:hover{
-    background-color: orangered;
-    color: white;
-    border: 3px solid white;
-    transition: 0.1s;
-  }
+  
     

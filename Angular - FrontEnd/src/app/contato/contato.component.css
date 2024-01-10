@@ -71,7 +71,7 @@ body h2{
 .contatos button{
     width: 100%;
     padding: 8px 16px;
-    border: 0 solid orangered;
+    border: 2px solid orangered;
     background-color: orangered;
     border-radius: 10px;
     font-weight: bold;
@@ -84,7 +84,7 @@ body h2{
     background-color: white;
     color: orangered;
     border: 2px solid orangered;
-    transition: 0.1s;
+    transition: 0.3s;
 }
 .infos li {
     color: white;
@@ -110,3 +110,29 @@ body h2{
 .infos p{
     margin-left: 5%;
 }
+
+.fimPagina{
+    margin-top: 5%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+  }
+  
+  .fimPagina ul{
+    font-size: 16px;
+    list-style-type: none;
+  }
+  
+  .fimPagina ul li{
+    margin-top: 1vw;
+  }
+  
+  .fimPagina ul li a{
+    text-decoration: none;
+    color: orangered;
+    font-weight: bold;
+  }
+
+  .fimPagina ul li a:hover{
+    color: black;
+  }

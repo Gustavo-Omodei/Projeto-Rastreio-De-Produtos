@@ -22,25 +22,6 @@
         <p><b>Cliente:</b> {{ rastreios.fkCliente }}
         <p><b>Destino Final:</b> {{rastreios.destinoFinal}}</p>
       </div>
-
-      <!-- Atualização de rastreio -->
-    <!-- <form (ngSubmit)="atualizarRastreio(rastreamentoID)">
-      <div *ngIf="teste">
-        <h2>Detalhes do Rastreamento</h2>
-        <p>Código de Rastreio:{{teste.codigoRastreio}}</p>
-        <p>Data do Evento: {{ teste.dataEvento | date:'short' }}</p>
-        <p>Status do Evento:<select [(ngModel)]="rastreamentoAtualizado.statusEvento" name="CodigoRastreio" required>
-          <option disabled selected value="">{{teste.statusEvento}}</option>
-          <option value="Coletado">Coletado</option>
-          <option value="Em Transporte">Em Transporte</option>
-          <option value="Entregue">Entregue</option>
-        </select> <br>
-        <p>Cliente: {{ teste.fkCliente }}</p>
-        <p>Destino Final: <input [(ngModel)]="rastreamentoAtualizado.destinoFinal" name="destinoFinal" required placeholder="{{teste.destinoFinal}}">
-      </div>
-      <button type="submit">Atualizar</button>
-    </form> -->
- 
   
 </body>
 </html>

@@ -11,6 +11,7 @@ import { SobreComponent } from './sobre/sobre.component';
 import { ContatoComponent } from './contato/contato.component';
 import { LoginComponent } from './login/login.component';
 import { AuthService } from './services/auth.service';
+import { AtualizarComponent } from './atualizar/atualizar.component';
 
 
 
@@ -23,7 +24,8 @@ import { AuthService } from './services/auth.service';
     RastreiosComponent,
     SobreComponent,
     ContatoComponent,
-    LoginComponent
+    LoginComponent,
+    AtualizarComponent
   ],
   imports: [
     BrowserModule,
