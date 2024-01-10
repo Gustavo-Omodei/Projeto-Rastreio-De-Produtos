@@ -107,7 +107,7 @@ body{
     margin-bottom: 2%;
   }
   
-  .rastreamento a {
+  .btnRastreio{
     background-color: white;
     text-decoration: none;
     color: orangered;
@@ -115,8 +115,8 @@ body{
     font-weight: bold;  
     font-size: 1.5vw;
     border-radius: 2vw;
+    border: 2px solid orangered;
   }
-  
   .fimPagina{
     margin-top: 5%;
     display: flex;
@@ -138,5 +138,16 @@ body{
     text-decoration: none;
     color: orangered;
     font-weight: bold;
+  }
+
+  .fimPagina ul li a:hover{
+    color: grey;
+  }
+
+  .btnRastreio:hover{
+    background-color: orangered;
+    color: white;
+    border: 3px solid white;
+    transition: 0.1s;
   }
     

@@ -10,16 +10,15 @@
     <div class="content first-content">
       <div class="first-column">
         <h2 class="tittle-bemvindo">Bem-Vindo!</h2>
-        <p class="description">to keep connected with us</p>
-        <p class="description">please login with your personal info</p>
+        <p class="description">Faça login para acessar as </p>
+        <p class="description">páginas de cadastro e atualização</p>
       </div>
 
       <div class="second-column">
-        <h2 class="tittle-Login">Create Account</h2>
-        <p class="description-Login">or user your email for your register</p>
+        <form *ngIf="!isLoggedIn" (ngSubmit)="fazerLogin()">
+        <h2 class="tittle-Login">Fazer login</h2>
+        <p class="description-Login">Digite suas credenciais</p>
 
-        <div class="forms" *ngIf="!isLoggedIn">
-          <form (ngSubmit)="fazerLogin()">
             <label for="">
               <input type="text" id="username" name="username" [(ngModel)]="usuario.username" placeholder="Usuário" required>
             </label>
@@ -28,9 +27,21 @@
             </label>
             <button class="btn" type="submit">Login</button>
           </form>
+
+        <div *ngIf="isLoggedIn">
+          <div class="loginSucesso">
+            <h2 class="tittle-Login">Login realizado com sucesso!</h2>
+            <p>Clique abaixo para ir para a página de cadastros.</p>
+            <button routerLink="/cadastro">Cadastros</button>
+          </div>
         </div>
       </div>
     </div>
+
+    <!-- <div *ngIf="isLoggedIn">
+      <p>Você está logado! Será redirecionado para a página de cadastro.</p>
+      <button routerLink="/cadastro">Ir para o Cadastro</button>
+    </div> -->
 
    
   </div>
@@ -38,19 +49,4 @@
 </body>
 </html>
 
-
-
-
-
-
-
-
-
-
-
-
-  <!--
-  <div *ngIf="isLoggedIn">
-    <p>Você está logado! Será redirecionado para a página de cadastro.</p>
-    <button routerLink="/cadastro">Ir para o Cadastro</button>
-  </div> --> 
+ 

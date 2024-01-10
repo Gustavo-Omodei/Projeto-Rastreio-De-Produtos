@@ -14,16 +14,15 @@ export class LoginComponent {
   constructor(private authService: AuthService) {}
 
   fazerLogin() {
-  console.log(this.usuario)
+  console.log("Usuario",this.usuario)
     this.authService.autenticar(this.usuario).subscribe(
       (response) => {
         console.log('Autenticação bem-sucedida:', response);
-        this.isLoggedIn = this.authService.getIsLoggedIn();
-        
-
+        this.isLoggedIn = this.authService.isLoggedIn();
       },
       (error) => {
         console.error('Falha na autenticação:', error);
+        alert("Usuário ou senha incorreta")
       }
     );
   }

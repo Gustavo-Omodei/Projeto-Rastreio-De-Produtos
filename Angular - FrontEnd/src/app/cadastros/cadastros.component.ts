@@ -6,7 +6,7 @@ import { RastreamentoService } from '../services/rastreamento.service';
 @Component({
   selector: 'app-cadastros',
   templateUrl: './cadastros.component.html',
-  styleUrl: './cadastros.component.css'
+  styleUrls: ['./cadastros.component.css']
 })
 export class CadastrosComponent {
   title = 'Rastreio';
